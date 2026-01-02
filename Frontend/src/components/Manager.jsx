@@ -11,11 +11,12 @@ const Manager = () => {
   const [passwordArray, setPasswordArray] = useState([]);
 
 const getPasswords = async () => {
-  let req = await fetch("http://localhost:3000/")
+  let req = await fetch(`${API_URL}`);
   let passwords = await req.json();
      setPasswordArray(passwords);
     }
   
+const API_URL = import.meta.env.VITE_API_URL;
 
   useEffect(() => {
     (async () => {
@@ -49,7 +50,7 @@ const deletePassword = async (id) => {
   const newPasswords = passwordArray.filter((item) => item.id !== id);
   setPasswordArray(newPasswords);
   // localStorage.setItem("passwords", JSON.stringify(newPasswords));
-  await fetch ("http://localhost:3000/", {
+  await fetch (` ${API_URL} `, {
     method: "DELETE",
     headers: {
       "Content-Type": "application/json",
@@ -61,13 +62,13 @@ const deletePassword = async (id) => {
 
    const savePassword = async () => {
         if (form.site.length > 0 && form.username.length > 0 && form.password.length > 0) {
-
-            // If any such id exists in the db, delete it 
+ 
+            // If any such id exists in the db, delete it
             if (form.id) { 
-            await fetch("http://localhost:3000/", { method: "DELETE", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ id: form.id }) })
+            await fetch(`${API_URL}`, { method: "DELETE", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ id: form.id }) })
             }
             setPasswordArray([...passwordArray, { ...form, id: uuidv4() }])
-            await fetch("http://localhost:3000/", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ ...form, id: uuidv4() }) })
+            await fetch(`${API_URL}`, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ ...form, id: uuidv4() }) })
 
             // Otherwise clear the form and show toast
             setform({ site: "", username: "", password: "" })
@@ -85,7 +86,6 @@ const deletePassword = async (id) => {
         else {
             toast(' Enter Valid credentials !');
         }
-
     }
 
 
