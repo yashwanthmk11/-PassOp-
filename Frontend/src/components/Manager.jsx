@@ -63,8 +63,9 @@ const deletePassword = async (id) => {
         if (form.site.length > 0 && form.username.length > 0 && form.password.length > 0) {
 
             // If any such id exists in the db, delete it 
+            if (form.id) { 
             await fetch("http://localhost:3000/", { method: "DELETE", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ id: form.id }) })
-
+            }
             setPasswordArray([...passwordArray, { ...form, id: uuidv4() }])
             await fetch("http://localhost:3000/", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ ...form, id: uuidv4() }) })
 
