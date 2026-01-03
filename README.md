@@ -11,7 +11,6 @@
 * **Frontend:** (https://passop-tau-lake.vercel.app/)
 * **Backend API:**(https://passop-l716.onrender.com)
 
-*(Replace the placeholders with actual deployment URLs)*
 
 ---
 
@@ -171,4 +170,5 @@ For frontend issues or feature requests, please open an issue or contact the mai
 ---
 
 Built with ❤️ using React + Vite
+
 
