@@ -165,10 +165,11 @@ Contributions are welcome.
 
 For backend-related issues, refer to the backend README.
 
-For frontend issues or feature requests, please open an issue or contact the maintainer.
+For frontend issues or feature requests, please open an issue .
 
 ---
 
 Built with ❤️ using React + Vite
+
 
 
