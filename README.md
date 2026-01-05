@@ -14,7 +14,7 @@
 
 ---
 
-## ✨ Key Features
+## ✨ Key Features..
 
 * 🔐 Create, edit, and delete credentials
 * 📋 One-click copy with secure toast feedback
@@ -170,6 +170,7 @@ For frontend issues or feature requests, please open an issue .
 ---
 
 Built with ❤️ using React + Vite
+
 
 
 
