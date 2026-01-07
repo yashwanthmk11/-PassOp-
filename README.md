@@ -169,7 +169,8 @@ For frontend issues or feature requests, please open an issue .
 
 ---
 
-Built with ❤️ using React + Vite
+Built with ❤️ using React + Vite............................................................................................
+
 
 
 
