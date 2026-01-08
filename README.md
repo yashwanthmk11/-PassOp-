@@ -1,4 +1,4 @@
-..# 🔐 PassOp
+# 🔐 PassOp
 
 **PassOp** is a modern, privacy-first password manager built with **React** and **Vite**, designed to make credential operations fast, minimal, and secure. It provides a clean, glassmorphic UI for creating, managing, copying, and deleting passwords while communicating with a backend API for persistent storage.
 
@@ -170,6 +170,7 @@ For frontend issues or feature requests, please open an issue .
 ---
 
 Built with ❤️ using React + Vite
+
 
 
 
